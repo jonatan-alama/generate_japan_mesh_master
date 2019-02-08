@@ -4,7 +4,7 @@
   "description": "",
   "main": "Generates location master for japan mesh codes",
   "scripts": {
-    "generate": "node generateMeshMaster.js"
+    "generate": "node --max-old-space-size=4096 generateMeshMaster.js"
   },
   "repository": {
     "type": "git",
