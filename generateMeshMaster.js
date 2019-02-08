@@ -55,7 +55,7 @@ const getCodeListFromCSV = function(url) {
         codeList.add(data["基準メッシュコード"]);
       })
       .on("end", () => {
-        resolve(codeList.values());
+        resolve(Array.from(codeList.values()));
       })
       .on("error", err => {
         reject(err);
@@ -90,23 +90,6 @@ const main = async function() {
     generateOutputFile(codeList, csvList[i].name, "250");
     generateOutputFile(codeList, csvList[i].name, "125");
   }
-  return;
-  generateCodes(meshCodes, "1000").forEach(code => {
-    const p = meshCodeToLngLat(code);
-    outputCode(code, p, 1000);
-  });
-  generateCodes(meshCodes, "500").forEach(code => {
-    const p = meshCodeToLngLat(code);
-    outputCode(code, p, 500);
-  });
-  generateCodes(meshCodes, "250").forEach(code => {
-    const p = meshCodeToLngLat(code);
-    outputCode(code, p, 250);
-  });
-  generateCodes(meshCodes, "125").forEach(code => {
-    const p = meshCodeToLngLat(code);
-    outputCode(code, p, 125);
-  });
 };
 
 (async () => {
