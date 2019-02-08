@@ -1,0 +1,25 @@
+{
+  "name": "generate_japan_mesh_master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Generates location master for japan mesh codes",
+  "scripts": {
+    "generate": "node generateMeshMaster.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonatan-alama/generate_japan_mesh_master.git"
+  },
+  "author": "Jonatan Alama <jonatan@aliolicode.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonatan-alama/generate_japan_mesh_master/issues"
+  },
+  "homepage": "https://github.com/jonatan-alama/generate_japan_mesh_master#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "fast-csv": "^2.4.1",
+    "iconv-lite": "^0.4.24",
+    "jsdom": "^13.2.0"
+  }
+}
